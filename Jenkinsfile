@@ -11,6 +11,9 @@ pipeline {
                 //dir('publish') { deletedir}
                 writeFile file: '/tmp/version.txt', text: 'BRANCH=${BRANCH_NAME_SAFE}'
             }
+            post {
+                echo "Execution of post stage"
+            }
         }
     }
 }

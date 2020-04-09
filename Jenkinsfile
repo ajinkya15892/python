@@ -9,7 +9,7 @@ pipeline {
                 sh 'python --version >> /tmp/python.txt'
                 echo "$BRANCH_NAME_SAFE"
                 //dir('publish') { deletedir}
-                writeFile file: '/tmp/version.txt', text: '$BRANCH_NAME_SAFE'
+                writeFile file: '/tmp/version.txt', text: 'BRANCH=${BRANCH_NAME_SAFE}'
             }
         }
     }

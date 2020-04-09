@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         BRANCH_NAME_SAFE = env.BRANCH_NAME.replace('/','-')
+    }
     stages {
         stage('build') {
             steps {

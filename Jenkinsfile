@@ -12,7 +12,9 @@ pipeline {
                 writeFile file: '/tmp/version.txt', text: 'BRANCH=${BRANCH_NAME_SAFE}'
             }
             post {
+                cleanup {
                 echo "Execution of post stage"
+            }
             }
         }
     }

@@ -11,5 +11,13 @@ pipeline {
                 //dir('publish') { deletedir}
             }
         }
+        stage('Deployment') {
+            steps {
+                sh 'python --version >> /tmp/python.txt'
+                echo "$BRANCH_NAME_SAFE"
+                echo "$BUILD_NUMBER"
+                //dir('publish') { deletedir}
+            }
+        }
     }
 }

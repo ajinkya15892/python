@@ -15,6 +15,7 @@ pipeline {
             post {
                 cleanup {
                 echo "Execution of post stage"
+                    echo "${GIT_COMMIT}"
             }
             }
         }

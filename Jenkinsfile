@@ -15,7 +15,7 @@ pipeline {
             post {
                 cleanup {
                 echo "Execution of post stage"
-                    echo "${GIT_COMMIT}" >> /tmp/python.txt
+                    sh 'echo "${GIT_COMMIT}" >> /tmp/commit.txt'
             }
             }
         }

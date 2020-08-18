@@ -10,7 +10,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
-            sh "echo ${GIT_COMMIT}"
+            sh "echo ${CHANGES}"
         }
     }
 }

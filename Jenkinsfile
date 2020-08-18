@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage('build') {
-            when { branch 'feature/confgure1' }
+            when { branch 'test' }
             steps {
                 sh 'python --version >> /tmp/python.txt'
                 echo "$BRANCH_NAME_SAFE"

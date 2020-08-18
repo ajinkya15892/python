@@ -1,13 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Example') {
             steps {
-                sh 'python --version >> /tmp/python.txt'
-                 }
-post {
-echo "feature branch" 
+                echo 'Hello World'
+            }
+        }
     }
-   }
- }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+            sh "echo ${GIT_COMMIT}"
+        }
+    }
 }

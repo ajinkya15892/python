@@ -11,7 +11,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
-            echo "${GITCHANGELOG}"
+            sh label: '', script: 'echo "${GITCHANGELOG}"'
         }
     }
 }

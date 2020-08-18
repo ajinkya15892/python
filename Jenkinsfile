@@ -1,8 +1,7 @@
+import jenkins.model.*
 pipeline {
     agent any
-    import jenkins.model.*
-    jenkins = Jenkins.instance
-    stages {
+      stages {
         stage('Example') {
             steps {
                 echo 'Hello World'
